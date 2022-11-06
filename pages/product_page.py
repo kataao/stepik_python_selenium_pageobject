@@ -18,14 +18,14 @@ class ProductPage(BasePage):
             "Success message is presented, but should not be"
 
     def should_display_success_message(self):
-        actual_product_title = self.browser.find_elements(*ProductPageLocators.SUCCESS_MESSAGE).text
+        actual_product_title = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE).text
         expected_product_title = self.get_product_title()
         assert actual_product_title == expected_product_title, \
             f"Product title in message is incorrect, " \
             f"expected: {expected_product_title}, actual: {actual_product_title}"
 
     def should_display_correct_price(self):
-        actual_product_price = self.browser.find_elements(*ProductPageLocators.PRICE_MESSAGE).text
+        actual_product_price = self.browser.find_element(*ProductPageLocators.PRICE_MESSAGE).text
         expected_product_price = self.get_product_price()
         assert actual_product_price == expected_product_price, \
             f"Cart total in message is incorrect, " \
