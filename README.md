@@ -1,1 +1,1 @@
-# stepik_python_selenium_pajeobject
+# stepik_python_selenium_pageobject
